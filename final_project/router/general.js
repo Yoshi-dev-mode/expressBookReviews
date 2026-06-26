@@ -58,6 +58,7 @@ function getBookByISBN(isbn) {
     });
 }
 
+// Get specific book
 public_users.get('/isbn/:isbn', async (req, res) => {
     const book = await getBookByISBN(req.params.isbn);
     return res.json(book);
